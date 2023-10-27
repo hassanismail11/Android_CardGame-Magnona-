@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--XML implementation of Card Layout
+	Keep the width of card layout to match parent-->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        android:id="@+id/basra"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"
+        android:background="@drawable/card_border"
+        android:padding="0dp">
+
+        <TextView
+            android:id="@+id/basra_num1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:fontFamily="@font/cardcharacter"
+            android:padding="2dp"/>
+
+        <ImageView
+            android:id="@+id/basra_suit"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/suit_spades" />
+
+        <TextView
+            android:id="@+id/basra_num2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:rotation="180"
+            android:text="A"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:fontFamily="@font/cardcharacter"
+            android:padding="2dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

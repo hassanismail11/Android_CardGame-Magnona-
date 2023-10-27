@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/dark_back"
+    tools:context=".PlaySoloActivity">
+
+    <Button
+        android:id="@+id/show_score"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="80dp"
+        android:layout_toEndOf="@+id/my_pp"
+        android:text="S"
+        android:textSize="25dp"
+        android:background="@mipmap/score_sheet"/>
+
+    <ImageButton
+        android:id="@+id/my_pp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/pp_blue_border"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/defult_pp" />
+
+    <TextView
+        android:id="@+id/my_name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_pp"
+        android:layout_alignStart="@+id/my_pp"
+        android:layout_marginTop="2dp"
+        android:text="Flik"
+        android:textAlignment="center"/>
+
+
+
+    <ImageButton
+        android:id="@+id/pp1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="100dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/defult_pp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/pp_red_border"
+        android:padding="1dp"/>
+    <TextView
+        android:id="@+id/p1_name"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pp1"
+        android:layout_alignStart="@id/pp1"
+        android:text="P1 Name"
+        android:textAlignment="center"
+        android:textSize="10dp" />
+
+    <ImageButton
+        android:id="@+id/pp2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/defult_pp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/pp_blue_border"
+        android:padding="1dp"/>
+
+    <TextView
+        android:id="@+id/p2_name"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/pp2"
+        android:layout_below="@id/pp2"
+        android:text="P2 Name"
+        android:textSize="10dp"
+        android:textAlignment="center" />
+
+    <ImageButton
+        android:id="@+id/pp3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="100dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/pp_red_border"
+        android:src="@mipmap/defult_pp"
+        android:scaleType="fitCenter"
+        android:padding="1dp"/>
+
+    <TextView
+        android:id="@+id/p3_name"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pp3"
+        android:layout_alignStart="@id/pp3"
+        android:text="P3 Name"
+        android:textAlignment="center"
+        android:textSize="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/top_card"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"
+        android:background="@drawable/card_border"
+        android:padding="0dp">
+
+        <TextView
+            android:id="@+id/top_card_num1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:fontFamily="@font/cardcharacter"
+            android:padding="2dp"/>
+
+        <ImageView
+            android:id="@+id/top_card_suit"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/suit_spades" />
+
+        <TextView
+            android:id="@+id/top_card_num2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:rotation="180"
+            android:text="A"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:fontFamily="@font/cardcharacter"
+            android:padding="2dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/cards_num"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_above="@id/top_card"
+        android:layout_toEndOf="@id/top_card"
+        android:background="@drawable/circle_border"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="10dp" />
+
+    <RelativeLayout
+        android:layout_width="252dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-20dp">
+
+        <RelativeLayout
+            android:id="@+id/my_card_1"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitCenter"
+            android:background="@drawable/card_border"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/my_card_1_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="K"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:fontFamily="@font/cardcharacter"
+                android:padding="2dp"/>
+
+            <ImageView
+                android:id="@+id/my_card_1_suit"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/suit_spades" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_card_2"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="4dp"
+            android:layout_toStartOf="@id/my_card_3"
+            android:scaleType="fitCenter"
+            android:background="@drawable/card_border"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/my_card_2_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="K"
+                android:textColor="@color/red"
+                android:textSize="18dp"
+                android:fontFamily="@font/cardcharacter"
+                android:padding="2dp"/>
+
+            <ImageView
+                android:id="@+id/my_card_2_suit"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/suit_hearts" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_card_3"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="4dp"
+            android:layout_toStartOf="@id/my_card_4"
+            android:scaleType="fitCenter"
+            android:background="@drawable/card_border"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/my_card_3_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="K"
+                android:textColor="@color/red"
+                android:textSize="18dp"
+                android:fontFamily="@font/cardcharacter"
+                android:padding="2dp"/>
+
+            <ImageView
+                android:id="@+id/my_card_3_suit"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/suit_diamond" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_card_4"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:scaleType="fitCenter"
+            android:background="@drawable/card_border"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/my_card_4_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="K"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:fontFamily="@font/cardcharacter"
+                android:padding="2dp"/>
+
+            <ImageView
+                android:id="@+id/my_card_4_suit"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/suit_clubs" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ToggleButton
+        android:id="@+id/red_cards"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_alignTop="@+id/pp2"
+        android:layout_alignEnd="@+id/pp1"
+        android:scaleType="fitCenter"
+        android:background="@drawable/card_back"
+        android:padding="3dp"
+        android:textOff=""
+        android:textOn=""/>
+    <TextView
+        android:id="@+id/red_cards_num"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_above="@id/red_cards"
+        android:layout_toEndOf="@id/red_cards"
+        android:background="@drawable/red_circle_border"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="10dp" />
+    <TextView
+        android:id="@+id/red_cards_wins"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_alignStart="@id/red_cards"
+        android:layout_alignTop="@id/red_cards"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+    <ToggleButton
+        android:id="@+id/blue_cards"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_alignStart="@+id/pp3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/card_back"
+        android:padding="3dp"
+        android:textOff=""
+        android:textOn="" />
+    <TextView
+        android:id="@+id/blue_cards_num"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_above="@id/blue_cards"
+        android:layout_toEndOf="@id/blue_cards"
+        android:background="@drawable/blue_circle_border"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="10dp" />
+
+    <TextView
+        android:id="@+id/dealer"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@+id/pp1"
+        android:layout_alignBottom="@id/pp1"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/dealer_circle_border"
+        android:gravity="center"
+        android:text="D" />
+
+    <RelativeLayout
+        android:id="@+id/basra_window"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/basra_shade_window"
+        android:alpha="0.5"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/basary_rec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="visible"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/score_board"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_toStartOf="@+id/red_cards"
+        android:layout_toEndOf="@+id/blue_cards"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/score_board_back"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/blue_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Blue"
+                android:textSize="40dp"
+                android:textColor="#1da1f2"
+                android:textAlignment="center"
+                android:layout_weight="0.5"/>
+
+            <TextView
+                android:id="@+id/red_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Red"
+                android:textSize="40dp"
+                android:textColor="#ff0000"
+                android:textAlignment="center"
+                android:layout_weight="0.5"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/hide_score"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/arrow_up"
+            android:background="@color/transparent"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/WarningMsg"
+        android:layout_width="400dp"
+        android:layout_height="230dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/basra_shade_window"
+        android:alpha="0.9"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First Four Cards Are"
+            android:textAlignment="center"
+            android:padding="3dp"/>
+
+        <RelativeLayout
+            android:id="@+id/GroundCards"
+            android:layout_width="252dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/Title">
+
+            <RelativeLayout
+                android:id="@+id/GroundCards1"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitCenter"
+                android:background="@drawable/card_border"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/GroundCards1_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="K"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/cardcharacter"
+                    android:padding="2dp"/>
+
+                <ImageView
+                    android:id="@+id/GroundCards1_suit"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/suit_spades" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/GroundCards2"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="4dp"
+                android:layout_toStartOf="@id/GroundCards3"
+                android:scaleType="fitCenter"
+                android:background="@drawable/card_border"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/GroundCards2_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="K"
+                    android:textColor="@color/red"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/cardcharacter"
+                    android:padding="2dp"/>
+
+                <ImageView
+                    android:id="@+id/GroundCards2_suit"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/suit_hearts" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/GroundCards3"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="4dp"
+                android:layout_toStartOf="@id/GroundCards4"
+                android:scaleType="fitCenter"
+                android:background="@drawable/card_border"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/GroundCards3_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="K"
+                    android:textColor="@color/red"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/cardcharacter"
+                    android:padding="2dp"/>
+
+                <ImageView
+                    android:id="@+id/GroundCards3_suit"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/suit_diamond" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/GroundCards4"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:scaleType="fitCenter"
+                android:background="@drawable/card_border"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/GroundCards4_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="K"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/cardcharacter"
+                    android:padding="2dp"/>
+
+                <ImageView
+                    android:id="@+id/GroundCards4_suit"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/suit_clubs" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sec_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dealer Card Is"
+            android:textAlignment="center"
+            android:layout_below="@id/GroundCards" />
+
+        <RelativeLayout
+            android:id="@+id/DealerCard"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/card_border"
+            android:padding="0dp"
+            android:layout_below="@id/sec_title"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/DealerCard_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="K"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:fontFamily="@font/cardcharacter"
+                android:padding="2dp"/>
+
+            <ImageView
+                android:id="@+id/DealerCard_suit"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/suit_clubs" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/MsgDismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Done"
+            android:background="@drawable/basra_shade_window"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="250dp"
+        android:layout_height="120dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:id="@+id/next_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/pp1"
+        android:layout_alignEnd="@+id/pp1"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="-10dp"
+        android:src="@drawable/ic_next_player" />
+
+</RelativeLayout>
